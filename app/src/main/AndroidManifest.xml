@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature android:name="android.hardware.camera.ar" android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="com.google.ar.core.depth" />
+
+    <application
+        android:hardwareAccelerated="true"
+
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/icon_logo_launcher"
+        android:label="PlantMe"
+        android:roundIcon="@mipmap/icon_logo_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Camera"
+        tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.ar.API_KEY"
+            android:value="put_HERE_your_com.google.android.ar.API_KEY"/>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="put_HERE_your_com.google.android.geo.API_KEY" />
+
+        <activity
+            android:exported="true"
+            android:name=".Activity_SignIn"
+            android:label="PlantMe"
+            android:theme="@style/Theme.PlantMeCustom">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:exported="true"
+            android:name=".Activity_SignUp"
+            android:label="PlantMe"
+            android:theme="@style/Theme.PlantMeCustom">
+        </activity>
+
+        <activity
+            android:exported="true"
+            android:name=".MainActivity"
+            android:label="PlantMe"
+            android:theme="@style/Theme.PlantMeCustom">
+        </activity>
+
+
+         <activity
+            android:exported="true"
+            android:name=".Activity_Menu"
+            android:label="PlantMe"
+            android:theme="@style/Theme.PlantMeCustom">
+        </activity>
+
+        <activity android:name=".Activity_Augmented_Reality"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:label="PlantMe"
+            android:screenOrientation="locked"
+            android:theme="@style/Theme.PlantMeCustom"/>
+
+        <activity
+            android:exported="true"
+            android:name=".Activity_projects_MultiUser"
+            android:label="PlantMe"
+            android:theme="@style/Theme.PlantMeCustom">
+        </activity>
+
+        <activity
+            android:exported="true"
+            android:name=".Activity_projects"
+            android:label="PlantMe"
+            android:theme="@style/Theme.PlantMeCustom">
+        </activity>
+
+
+    </application>
+
+</manifest>

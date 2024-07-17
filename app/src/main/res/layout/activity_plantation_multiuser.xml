@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/activity_registration.xml -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/projectsLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/reply_blue"
+    tools:context=".Activity_projects">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="25dp"
+            android:text="Others Plantation"
+            android:id="@+id/ProjectText"
+            android:textSize="26sp"
+            android:textColor="@color/orange"
+            android:textAlignment="center"
+            android:textStyle="bold"/>
+
+        <ImageButton
+            android:id="@+id/btnMyProjects"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="end|top"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/draw_button_custom"
+            android:src="@drawable/baseline_person_24" />
+
+        <ImageButton
+            android:id="@+id/btnBackToProfile"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="end|top"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/draw_button_custom"
+            android:src="@drawable/baseline_turn_left_24" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewProjects"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"/>
+
+
+
+
+</LinearLayout>

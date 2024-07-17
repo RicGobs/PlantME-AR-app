@@ -1,0 +1,5 @@
+<resources>
+    <string name="tap">Ready to put the plants</string>
+    <string name="not">Move around and put the plants!</string>
+    <string name="success">node hosted</string>
+</resources>
